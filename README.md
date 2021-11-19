@@ -4,11 +4,20 @@ A data visualization tool to show your Sleeper fantasy football roster's points 
 ## About
 This is a program that will show your Sleeper fantasy football roster's PPR fantasy points above projected via a bar chart. The program loops through your roster for each week of the season and calculates the players actual points - projected points and returns the total difference from each week so far in a season. The point of this program is to see which players are overperforming and which are underperforming. If a player has a high points above projected, they are likely overperforming, and if they have a low/negative points above projected, they are underperforming.
 
-The program uses Python, an "undocumented" Sleeper API, and matplotlib to visualize the data.
+The program uses Python, an "undocumented" Sleeper API, the real Sleeper API, and matplotlib to visualize the data.
 
 In the future, I plan to run some sort of model accuracy test to determine how accurate Sleepers projections are, because in the end, while we can draw conclusions about if a player is over/under performing, it's smart to keep in mind that the reason we make those conclusions could be because Sleepers point projection model isn't good. For the most part, based on an extremely general eye test (and you'll see in the sample provided in this README) the projections seem fairly accurate.
 ## How To Run
 Note - I know this program is kind of tedious to run. I plan on fixing this in the future. For now thoguh, here are the steps:
+Wait Another Note - Also, I used PyCharm Community to run this. You could use any IDE but this or Spyder would be the best options as they are great for Data Vis. Ok now the steps:
+1. Download code and open in the IDE. You'll notice there are two main sections for code: Config and Main. We'll be working in the Config section only.
+2. Add your league ID into the league_id variable. You can find your leagues ID in the Sleeper URL bar like this:
+
+  ![image](https://user-images.githubusercontent.com/68918006/142666167-5927076e-6c3b-4adf-871e-183a08e6c468.png)
+
+3. This next step is the most tedious. We need to find the index of your team in the response. I reccomend using an app like Postman to get the response of the API to find your team. Go to this URL: https://api.sleeper.app/v1/league/{YourLeagueID}/rosters and search for your team. Now, the most annoying part of this is there really isn't an easy way to find your team. You kind of have to look through every single team in the array and find player nicknames that are on your team. Once you find your team, take the roster_id and subtract 1. This will be what you add to the my_team variable. The reason for this being the API doesn't give us team names, it only gives us a team number (1-the amount of teams in your league) and a user ID, which I haven't found a way to find on the Sleeper website. Since that was just about impossible to follow, here is a GIF tutorial on how to find your team.
+
+4. Once you have all of the variables in the config section asigned, run the code! It may take a while so be patient with that.
 
 
 ## Sample Output
