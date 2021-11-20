@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 #See README.md for better instructions on how to run the program.
 ######################################### Config ######################################################
 #You can get this from looking at the URL bar on sleepers website
-league_id = "658927010000764928"
+league_id = "" #Add league ID here
 url = requests.get('https://api.sleeper.app/v1/league/'+league_id+'/rosters')
 rosters = url.json()
 #To get the team you want to see, you need to look at the response from the API above and find what index your team is at.
-my_team = rosters[7]
+my_team = rosters[] #Add my_team roster index here
 roster = my_team["players"]
 
 week = 10
