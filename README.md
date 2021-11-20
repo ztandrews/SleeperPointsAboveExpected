@@ -17,6 +17,19 @@ Wait Another Note - Also, I used PyCharm Community to run this. You could use an
 
 3. This next step is the most tedious. We need to find the index of your team in the response. I reccomend using an app like Postman to get the response of the API to find your team. Go to this URL: https://api.sleeper.app/v1/league/{YourLeagueID}/rosters and search for your team. Now, the most annoying part of this is there really isn't an easy way to find your team. You kind of have to look through every single team in the array and find player nicknames that are on your team. Once you find your team, take the roster_id and subtract 1. This will be what you add to the my_team variable. The reason for this being the API doesn't give us team names, it only gives us a team number (1-the amount of teams in your league) and a user ID, which I haven't found a way to find on the Sleeper website. Since that was just about impossible to follow, here is a step by step tutorial with screenshots on how to find your team:
 
+First, find a player nickname you can search. Here's mine:
+![image](https://user-images.githubusercontent.com/68918006/142706285-f6be267b-738f-4f15-80d5-a60b875173cc.png)
+
+Next, go into postman and paste the API URL into it, with your own league ID where mine is:
+![image](https://user-images.githubusercontent.com/68918006/142706365-6ba8cbdd-60d7-474e-afad-7888b3f39bf1.png)
+
+After clicking run, you should see a response with every team in your leagues roster. CTL+F and search for the nickname of your player that you want to find like so:
+![image](https://user-images.githubusercontent.com/68918006/142706403-120afdac-65ea-494a-9920-7d2a0228c7e8.png)
+
+After fidning the nickname, scroll up and find roster_id. Subtract 1 from that, and that is what you put as the my_team variable:
+![image](https://user-images.githubusercontent.com/68918006/142706477-089c735a-0d84-4f40-8867-2cb3e68eb1ad.png)
+
+
 
 4. Once you have all of the variables in the config section asigned, run the code! It may take a while so be patient with that.
 
