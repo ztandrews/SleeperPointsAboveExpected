@@ -24,7 +24,7 @@ Next, go into Postman and paste the API URL into it, with your own league ID whe
 ![image](https://user-images.githubusercontent.com/68918006/142707259-0bc38fa2-79bb-471c-a2f9-222a1e40204e.png)
 
 After clicking run, you should see a response with every team in your leagues roster. CTL+F and search for the nickname of your player that you want to find like so:
-![image](https://user-images.githubusercontent.com/68918006/142706403-120afdac-65ea-494a-9920-7d2a0228c7e8.png)
+![image](https://user-images.githubusercontent.com/68918006/142745952-4b7c3196-5c8a-4b15-9b2d-cd8c854c93d3.png)
 
 After fidning the nickname, scroll up and find roster_id. Subtract 1 from that, and set that to the my_team variable.
 ![image](https://user-images.githubusercontent.com/68918006/142706477-089c735a-0d84-4f40-8867-2cb3e68eb1ad.png)
